@@ -1,0 +1,36 @@
+<!-- Задание 3
+
+Напишите код приложения, интерфейс которого представляет собой input и кнопку.
+В input можно ввести любое число. При клике на кнопку происходит следующее:
+
+Если число не попадает в диапазон от 1 до 10 — выводить ниже текст «число вне диапазона от 1 до 10».
+
+Если число попадает в диапазон от 1 до 10 — сделать запрос
+c помощью XHR по URL https://picsum.photos/v2/list?limit=10, где get-параметр limit — это введённое число.
+
+Пример. Если пользователь ввёл 5, то запрос будет вида: https://picsum.photos/v2/list?limit=5.
+
+После получения данных вывести ниже картинки на экран. -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>module9_homework_task3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="input_wrapper">
+        <label class="label block" for="#num_input">Введите число от 1 до 10</label>
+        <input class="input block" type="number" name="input_num" id="num_input">
+        <button class="button block">Показать результат</button>
+        <span class="error block">Число вне диапазона от 1 до 10</span>   
+    </div>
+    <div class="input_wrapper result">
+        <span class="result_text block">Резульат:</span>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
